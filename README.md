@@ -59,3 +59,39 @@ Before opening or replacing anything, you must **create a full backup** of your 
 10. The backup is now done and we can move to the next step, replacing the CM4 with the new one! **Turn off and unplug** your Homey Pro before opening the case.  
 
 > **Important:** this backup image includes your Homey account credentials. **Do not share the backup file publicly or with others.**
+
+
+# Part 2 - Hardware Upgrade
+<img width="2371" height="384" alt="image" src="https://github.com/user-attachments/assets/11860413-f3c6-4fd8-b6da-a93d1646990e" />
+
+
+1. Turn the unit upside down. Carefully detach the rubber bottom to reveal 4 screws (not just one).
+
+2. Use a Torx T9 bit (or suitable screwdriver) to unscrew the 4 screws at the bottom. Remove them completely.
+
+3. Open the plastic casing. Carefully separate the two halves of the shell; there are no more screws, but be gentle.
+
+4. Inside you’ll find a black heatsink-fin module attached over the CM4. Instead of desoldering pins between boards (which is a different method), this guide uses removal of the nuts on the heatsink. 
+
+## Remove the old CM4-Module
+<img width="2560" height="353" alt="image" src="https://github.com/user-attachments/assets/2f26c7e9-e307-4edb-823d-42e370dfa63b" />
+
+5. Using a small wrench or (better) small precision pliers / flat-nose pliers, loosen and remove the 4 nuts that hold down the heatsink module. The space is tight, but it’s doable — some bending of fins may be needed (bend carefully, then bend back when reassembling). 
+
+6. Once the heatsink and its spacers are free, lift off the heatsink module. Then you’ll have access to the underlying CM4-carrier board with the module. 
+
+7. Gently unplug the CM4 module from its edge connector using a plastic pry tool (or gentle leverage), carefully lifting — don’t force or twist.
+
+8. Remove the small thermal pad ("kølepad") attached to the old CM4 module. It’s lightly stuck — remove carefully.
+
+## Mount the new CM4-Module
+<img width="1271" height="384" alt="image" src="https://github.com/user-attachments/assets/a3d83db2-6ce6-4944-ae1c-1c5d4227b275" />
+
+10. Attach this same thermal pad onto the new CM4 module (don’t add extra glue or adhesives). 
+
+11. Place the new CM4 module on the carrier board where the old one was. Align the module properly. 
+
+12. Reinstall the spacers and black heatsink-fin module. Carefully realign and reattach the 4 heatsink nuts (best done with precision tools, possibly holding nuts with pliers while tightening). 
+Homey Guide
+
+13. Close the plastic case: reassemble housing, reinstall the 4 bottom screws, and snap/attach the rubber base.
