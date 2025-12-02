@@ -56,6 +56,6 @@ Before opening or replacing anything, you must **create a full backup** of your 
 7. In the USB Tool interface in your browser, select the device and click **“Create a Backup”**. Choose a location on your PC to store the file.
 8. Wait for the backup process to complete (may take a few minutes). Now you have a full system image — OS + all your Homey data.  
 9. Store the backup file safely (e.g. on an external drive, cloud storage, etc.).  
-10. **Turn off and unplug** your Homey Pro before opening the case.  
+10. The backup is now done and we can move to the next step, replacing the CM4 with the new one! **Turn off and unplug** your Homey Pro before opening the case.  
 
 > **Important:** this backup image includes your Homey account credentials. **Do not share the backup file publicly or with others.**
