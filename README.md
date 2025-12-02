@@ -58,4 +58,4 @@ Before opening or replacing anything, you must **create a full backup** of your 
 9. Store the backup file safely (e.g. on an external drive, cloud storage, etc.).  
 10. **Turn off and unplug** your Homey Pro before opening the case.  
 
-> **Important:** this backup image includes your Homey account credentials. **Do not share the backup file publicly or with others.** :contentReference[oaicite:5]{index=5}  
+> **Important:** this backup image includes your Homey account credentials. **Do not share the backup file publicly or with others.**
