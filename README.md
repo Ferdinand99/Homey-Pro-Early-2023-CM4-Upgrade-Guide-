@@ -301,3 +301,14 @@ Wait a moment until your Homey Pro 2023, with its new and many times larger CM4 
 Then go to https://my.homey.app/ or the homey app and click on the gear at the bottom of the menu on the left.
 
 # Backup time
+Now we have reached our goal! We have gone through the process of backing up the Linux operating system including the Homey software on the old/original CM4 module, replacing it with a new CM4 module with much larger memory and disk space, restoring the original operating system on the new CM4 module, jailbreaking our way into the Linux operating system behind the Homey software and finally expanding the USER disk space with a bunch of SSH system commands – SO NOW IT IS TIME TO TAKE A NEW BACKUP.
+
+This backup will be a good starting point for the new CM4 module, if the developers behind Homey later try to cancel our upgrade. This backup cannot be used to restore to the old/original Homey Pro 2023 CM4 module, as it is adapted to 32 GB of disk space and not 8 GB, which is the original disk space.
+
+In Part 1 – Backup of Homey’s operating system you can get help taking a new backup.
+
+I would recommend that you save a backup file of both the old/original Homey Pro 2023 CM4 module and the new CM4 module on your PC in a safe place. It is best to make a backup of these backup images, e.g. to Microsoft Onedrive or similar.
+
+IMPORTANT! You must never share your Homey backup image with others! Your Homey account is included in the backup and will be transferred to the recipient's Homey Pro 2023.
+
+There have been rumors in several forums on the Internet that this backup cannot be restored on new CM4 modules. I have tested it and it works perfectly!
