@@ -14,7 +14,7 @@ Proceed at your own risk.
 
 NB: Pictures used in this guide is taken from a Danish YouTubers guide. But i followed his guide to do the procedure, so I can confirm that the pictures are correct
 
-***If I have missed something or you have any question, create an issue or use the discussion button on this repo***
+***If I have missed something or you have any question, use the discussion button on this repo***
 
 ---
 
