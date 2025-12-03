@@ -237,6 +237,7 @@ If you want to have root rights at all times, and thus avoid typing sudo in fron
 Let's look at the 7 commands. When you want to execute them, copy/paste them into Terminal, rather than typing them manually. This will avoid typing errors. A single wrong letter can result in unexpected results.
 
 1. ``sudo fdisk -l /dev/mmcblk0``
+   
    ***You may be asked to enter your password again to confirm that root privileges are to be used.***
    <img width="811" height="356" alt="image" src="https://github.com/user-attachments/assets/d11186f3-519c-47f6-a37d-a4f6f3589d37" />
 
@@ -251,6 +252,7 @@ In Homey Pro 2023's Extended partition, there are 4 (logical) partitions nested.
 But since the User partition is embedded in a 7.2 GB Extended partition, which is completely filled, we cannot expand it right away. We have to expand the Extended partition first.
 
 2. ``sudo parted /dev/mmcblk0 resizepart 2 100%``
+   
    ***You may be asked to enter your password again to confirm that root privileges are to be used.***
    <img width="1000" height="129" alt="image" src="https://github.com/user-attachments/assets/2b17ab00-634a-4bff-914d-587c833e2a62" />
 
@@ -260,13 +262,15 @@ But since the User partition is embedded in a 7.2 GB Extended partition, which i
 
    Note the number **2** in the command. This corresponds to the number that the **Extended** partition has.
 
-3. ``sudo fdisk -l /dev/mmcblk0``
+4. ``sudo fdisk -l /dev/mmcblk0``
+   
    ***You may be asked to enter your password again to confirm that root privileges are to be used.***
    <img width="954" height="378" alt="image" src="https://github.com/user-attachments/assets/689c0a60-3763-4d07-b340-50a58f1409ec" />
 
    Same command as in point 1. Here we check that the Extended partition has been expanded from 7.2 GB to 29.1 GB.
 
-4. ``sudo parted /dev/mmcblk0 resizepart 9 100%``
+5. ``sudo parted /dev/mmcblk0 resizepart 9 100%``
+   
    ***You may be asked to enter your password again to confirm that root privileges are to be used.***
    <img width="1000" height="129" alt="image" src="https://github.com/user-attachments/assets/838a1011-1775-4063-92fa-8965604a3ad6" />
 
@@ -274,13 +278,15 @@ But since the User partition is embedded in a 7.2 GB Extended partition, which i
 
    Notice the number **9** in the command. This corresponds to the number that the User partition has – which we checked at the end of step 1.
 
-5. ``sudo fdisk -l /dev/mmcblk0``
+6. ``sudo fdisk -l /dev/mmcblk0``
+   
    ***You may be asked to enter your password again to confirm that root privileges are to be used.***
    <img width="954" height="356" alt="image" src="https://github.com/user-attachments/assets/d8958182-ae3e-46ca-9e3d-edd8197ac92d" />
 
    Well-known command that we have used twice before. This time we check that the **User** partition, ``/dev/mmcblk0p9``, has been expanded from 2.7 GB to a glorious 24.6 GB!
 
-6. ``sudo resize2fs /dev/mmcblk0p9``
+7. ``sudo resize2fs /dev/mmcblk0p9``
+   
    ***You may be asked to enter your password again to confirm that root privileges are to be used.***
    <img width="962" height="127" alt="image" src="https://github.com/user-attachments/assets/68711c5a-ef44-4fc7-bcac-cbe0014d7a80" />
 
@@ -288,7 +294,8 @@ But since the User partition is embedded in a 7.2 GB Extended partition, which i
 
    Without this command, Homey cannot see and utilize more than the 2.7 GB that the partition originally had before we extended it.
 
-7. ``sudo reboot now``
+8. ``sudo reboot now``
+   
    <img width="668" height="172" alt="image" src="https://github.com/user-attachments/assets/3fa558cc-5b8e-42c3-84ee-6cf3c9aeccfb" />
 
    Restart Homey Pro 2023 so that it detects that more disk space has become available in the **USER** partition.
